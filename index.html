@@ -27,6 +27,7 @@
       overflow-x: hidden;
     }
 
+    /* ─── NAV ─── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -66,6 +67,7 @@
 
     .nav-links a:hover { opacity: 1; color: var(--gold); }
 
+    /* ─── HERO ─── */
     #hero {
       min-height: 100vh;
       display: flex;
@@ -84,8 +86,18 @@
       background:
         radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 70%),
         radial-gradient(ellipse 50% 40% at 80% 80%, rgba(139,26,26,0.10) 0%, transparent 60%),
-        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px),
-        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px);
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 59px,
+          rgba(201,168,76,0.04) 60px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 59px,
+          rgba(201,168,76,0.04) 60px
+        );
     }
 
     .school-badge {
@@ -105,9 +117,13 @@
       animation: fadeDown 0.7s ease both;
     }
 
-    .school-badge::before { content: '✦'; font-size: 0.65rem; }
+    .school-badge::before {
+      content: '✦';
+      font-size: 0.65rem;
+    }
 
     .hero-eyebrow {
+      font-family: 'DM Sans', sans-serif;
       font-size: 0.85rem;
       font-weight: 500;
       letter-spacing: 0.35em;
@@ -192,8 +208,13 @@
       border-radius: 0.3rem;
       transition: border-color 0.2s, background 0.2s, transform 0.15s;
     }
-    .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); transform: translateY(-2px); }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      transform: translateY(-2px);
+    }
 
+    /* ─── TICKET BAR ─── */
     .ticket-bar {
       background: rgba(201,168,76,0.08);
       border-top: 1px solid rgba(201,168,76,0.2);
@@ -240,9 +261,13 @@
       color: var(--white);
     }
 
+    /* ─── SECTIONS SHARED ─── */
     section { padding: 7rem 2rem; }
 
-    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
     .section-label {
       font-size: 0.7rem;
@@ -279,6 +304,7 @@
       max-width: 620px;
     }
 
+    /* ─── ABOUT ─── */
     #about { background: var(--navy); }
 
     .about-grid {
@@ -327,51 +353,8 @@
       padding-left: 1rem;
     }
 
+    /* ─── WHY ME ─── */
     #why { background: rgba(201,168,76,0.04); border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); }
-
-    .why-stat-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      background: rgba(201,168,76,0.07);
-      border: 1px solid rgba(201,168,76,0.18);
-      border-radius: 0.75rem;
-      padding: 2rem 2.5rem;
-      margin-bottom: 2.5rem;
-      flex-wrap: wrap;
-    }
-
-    .why-stat {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-      text-align: center;
-    }
-
-    .why-stat-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.8rem;
-      color: var(--gold);
-      line-height: 1;
-    }
-
-    .why-stat-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cream);
-      opacity: 0.6;
-      max-width: 160px;
-    }
-
-    .why-stat-divider {
-      width: 1px;
-      height: 50px;
-      background: rgba(201,168,76,0.2);
-    }
 
     .why-grid {
       display: grid;
@@ -388,9 +371,15 @@
       transition: border-color 0.25s, transform 0.2s;
     }
 
-    .why-card:hover { border-color: rgba(201,168,76,0.45); transform: translateY(-4px); }
+    .why-card:hover {
+      border-color: rgba(201,168,76,0.45);
+      transform: translateY(-4px);
+    }
 
-    .why-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+    .why-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
 
     .why-card-title {
       font-family: 'DM Serif Display', serif;
@@ -406,6 +395,7 @@
       opacity: 0.65;
     }
 
+    /* ─── PLATFORM ─── */
     #platform { background: var(--navy); }
 
     .platform-list {
@@ -454,6 +444,20 @@
       font-style: italic;
     }
 
+    .placeholder-tag {
+      display: inline-block;
+      background: rgba(201,168,76,0.1);
+      border: 1px dashed rgba(201,168,76,0.3);
+      color: var(--gold);
+      opacity: 0.7;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.25rem;
+      margin-top: 0.4rem;
+    }
+
+    /* ─── PARTICIPATE ─── */
     #participate {
       background: linear-gradient(160deg, rgba(139,26,26,0.15) 0%, rgba(10,22,40,1) 60%);
       border-top: 1px solid rgba(201,168,76,0.1);
@@ -467,7 +471,11 @@
       margin-top: 3rem;
     }
 
-    .participate-ways { display: flex; flex-direction: column; gap: 1.2rem; }
+    .participate-ways {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
 
     .participate-way {
       display: flex;
@@ -484,8 +492,14 @@
     .participate-way:hover { border-color: rgba(201,168,76,0.4); }
 
     .pw-icon { font-size: 1.4rem; }
+
     .pw-text { flex: 1; }
-    .pw-title { font-weight: 600; font-size: 0.9rem; color: var(--white); margin-bottom: 0.2rem; }
+    .pw-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
     .pw-desc { font-size: 0.8rem; color: var(--cream); opacity: 0.55; }
 
     .contact-box {
@@ -546,6 +560,7 @@
     }
     .contact-submit:hover { background: var(--gold-light); }
 
+    /* ─── FOOTER ─── */
     footer {
       padding: 3rem 2rem;
       text-align: center;
@@ -560,11 +575,24 @@
       margin-bottom: 0.4rem;
     }
 
-    .footer-sub { font-size: 0.78rem; color: var(--cream); opacity: 0.4; letter-spacing: 0.12em; }
+    .footer-sub {
+      font-size: 0.78rem;
+      color: var(--cream);
+      opacity: 0.4;
+      letter-spacing: 0.12em;
+    }
 
-    @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
+    /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.2rem; }
@@ -573,13 +601,61 @@
       .why-grid { grid-template-columns: 1fr; }
       .ticket-grid { gap: 2rem; }
       .hero-cta { flex-direction: column; align-items: center; }
+    }
+    .why-stat-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 0.75rem;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .why-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      text-align: center;
+    }
+
+    .why-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .why-stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.6;
+      max-width: 160px;
+    }
+
+    .why-stat-divider {
+      width: 1px;
+      height: 50px;
+      background: rgba(201,168,76,0.2);
+    }
+
+    @media (max-width: 600px) {
       .why-stat-divider { display: none; }
       .why-stat-bar { gap: 1.5rem; }
     }
+
   </style>
 </head>
 <body>
 
+  <!-- NAV -->
   <nav>
     <div class="nav-logo">Rocco for President</div>
     <ul class="nav-links">
@@ -590,6 +666,7 @@
     </ul>
   </nav>
 
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
     <div class="school-badge">Xaverian High School · Bay Ridge</div>
@@ -597,13 +674,17 @@
     <h1 class="hero-name">Rocco<br><span>Pisani</span></h1>
     <p class="hero-title">for Student Body President</p>
     <div class="hero-divider"></div>
-    <p class="hero-tagline">More Than Just a Title.</p>
+    <p class="hero-tagline">
+      More Than Just a Title.
+    </p>
+    <p style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.15em; color:var(--gold); margin-top:0.5rem; animation: fadeUp 0.9s 0.6s ease both;">Rock with Rocco.</p>
     <div class="hero-cta">
       <a href="#platform" class="btn-primary">See the Platform</a>
       <a href="#participate" class="btn-outline">Get Involved</a>
     </div>
   </section>
 
+  <!-- TICKET BAR -->
   <div class="ticket-bar">
     <p class="ticket-label">The Full Ticket</p>
     <div class="ticket-grid">
@@ -613,7 +694,7 @@
       </div>
       <div class="ticket-member">
         <span class="ticket-role">Vice President</span>
-        <span class="ticket-name">Henry Izzi</span>
+        <span class="ticket-name">Peter McElhinney</span>
       </div>
       <div class="ticket-member">
         <span class="ticket-role">Secretary</span>
@@ -622,6 +703,7 @@
     </div>
   </div>
 
+  <!-- ABOUT -->
   <section id="about">
     <div class="section-inner">
       <div class="about-grid">
@@ -642,97 +724,116 @@
     </div>
   </section>
 
+  <!-- WHY ME -->
   <section id="why">
     <div class="section-inner">
       <p class="section-label">The Case for Rocco</p>
       <h2 class="section-title">Why Rocco?</h2>
       <p class="section-subtitle">The right person, at the right time.</p>
       <div class="why-stat-bar">
-        <div class="why-stat">
-          <span class="why-stat-num">$400K+</span>
-          <span class="why-stat-label">Raised for Blood Cancer Research</span>
+          <div class="why-stat">
+            <span class="why-stat-num">$400K+</span>
+            <span class="why-stat-label">Raised for Blood Cancer Research</span>
+          </div>
+          <div class="why-stat-divider"></div>
+          <div class="why-stat">
+            <span class="why-stat-num">3+</span>
+            <span class="why-stat-label">Years of Consistent Commitment</span>
+          </div>
+          <div class="why-stat-divider"></div>
+          <div class="why-stat">
+            <span class="why-stat-num">∞</span>
+            <span class="why-stat-label">Reason to Trust He'll Show Up</span>
+          </div>
         </div>
-        <div class="why-stat-divider"></div>
-        <div class="why-stat">
-          <span class="why-stat-num">3+</span>
-          <span class="why-stat-label">Years of Consistent Commitment</span>
-        </div>
-        <div class="why-stat-divider"></div>
-        <div class="why-stat">
-          <span class="why-stat-num">∞</span>
-          <span class="why-stat-label">Reason to Trust He'll Show Up</span>
-        </div>
-      </div>
       <div class="why-grid">
         <div class="why-card">
           <div class="why-icon">🎯</div>
           <p class="why-card-title">We Actually Listen</p>
-          <p class="why-card-body">Every month, we'll send out a Google Form to the whole school asking what you want changed. Your feedback will directly shape what we work on — no guessing, no ignoring students, just real action based on what you actually want.</p>
+          <p class="why-card-body">
+            Every month, we'll send out a Google Form to the whole school asking what you want changed. Your feedback will directly shape what we work on — no guessing, no ignoring students, just real action based on what you actually want.
+          </p>
         </div>
         <div class="why-card">
           <div class="why-icon">📋</div>
           <p class="why-card-title">Full Transparency, All Year</p>
-          <p class="why-card-body">We're committing to monthly "What We've Done This Month" posts so you can hold us accountable — not just during campaign season, but every single month we're in office.</p>
+          <p class="why-card-body">
+            We're committing to monthly "What We've Done This Month" posts so you can hold us accountable — not just during campaign season, but every single month we're in office.
+          </p>
         </div>
         <div class="why-card">
           <div class="why-icon">🎙️</div>
           <p class="why-card-title">He Knows How to Lead</p>
-          <p class="why-card-body">For over three years, Rocco has raised $400,000+ for blood cancer research through Blood Cancer United, speaking at events to inspire donations and awareness. If he can represent a cause that big, he can represent Xaverian.</p>
+          <p class="why-card-body">
+            For over three years, Rocco has raised $400,000+ for blood cancer research through Blood Cancer United, speaking at events to inspire donations and awareness. If he can represent a cause that big, he can represent Xaverian.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PLATFORM -->
   <section id="platform">
     <div class="section-inner">
       <p class="section-label">The Plan</p>
       <h2 class="section-title">Platform</h2>
-      <p class="section-body" style="margin-bottom: 0;">Here's exactly what Rocco, Henry, and Athena will fight for when elected.</p>
+      <p class="section-body" style="margin-bottom: 0;">
+        Here's exactly what Rocco, Peter, and Athena will fight for when elected.
+      </p>
       <div class="platform-list">
+
         <div class="platform-item">
           <div class="platform-num">01</div>
           <div class="platform-content">
             <p class="platform-title">Student Voice & Transparency</p>
-            <p class="platform-desc">Monthly Google Forms so every student can request changes around school. Monthly "What We've Done" posts so you can hold us accountable all year — not just at election time. Student polls for things like Spirit Week themes so your vote actually matters.</p>
+            <p class="platform-desc">Monthly Google Forms so every student can request changes around school. Student polls for Spirit Week themes so your vote actually counts. Monthly "What We've Done This Month" posts so you can hold us accountable all year long — not just at election time.</p>
           </div>
         </div>
+
         <div class="platform-item">
           <div class="platform-num">02</div>
           <div class="platform-content">
-            <p class="platform-title">Better Food & Cafeteria Upgrades</p>
-            <p class="platform-desc">Chipotle bowl bar. Gatorade in the cafeteria. Microwaves so you can actually heat up your food. Different creamers and flavors for coffee. Get the ice cream freezer back and replace the chips. Small changes, huge difference every single day.</p>
+            <p class="platform-title">Cafeteria Upgrades</p>
+            <p class="platform-desc">Chipotle bowl bar — we already have the grilled chicken, we just need rice and cheese. Microwaves so you can heat up your food. Better coffee with different creamers and flavors. Get the ice cream freezer back. Improve breakfast with more options like burritos and protein smoothies. Keep posting the cafeteria menu on Instagram. And get the ice machine that's already there actually working.</p>
           </div>
         </div>
+
         <div class="platform-item">
           <div class="platform-num">03</div>
           <div class="platform-content">
             <p class="platform-title">School Events & Spirit</p>
-            <p class="platform-desc">Bring back Senior Assassin. Bigger, better basketball game events. A real club fair — not just for freshmen, for everyone. More school spirit moments and events that actually get people hyped to be a Xaverian Claver.</p>
+            <p class="platform-desc">Bigger, better sports events — show up to a game and get something for it. Buses to away games funded by bake sales. Senior events like Top Gold. A real club fair open to every grade, not just freshmen. Student polls for Spirit Week so the whole school has a say.</p>
           </div>
         </div>
+
         <div class="platform-item">
           <div class="platform-num">04</div>
           <div class="platform-content">
             <p class="platform-title">Smarter School Life</p>
-            <p class="platform-desc">A modernized school calendar and website showing which clubs meet each day so nobody misses out. A bookable after-school study room for extra studying. Fix the AC in the chapel and cafeteria. Get the ice machine working in the room it's already in.</p>
+            <p class="platform-desc">A bookable after-school study room for extra studying. Fix the AC in the chapel and cafeteria to a normal level. Improve the gym — broken equipment gets replaced. A segment on WXBN as student body president to keep the whole school informed. A health awareness week to encourage students to live better.</p>
           </div>
         </div>
+
         <div class="platform-item">
           <div class="platform-num">05</div>
           <div class="platform-content">
             <p class="platform-title">Community & Service</p>
-            <p class="platform-desc">Weekend community service opportunities to help students earn hours and build their résumés. More community service trips — Guatemala, Candam NJ, and beyond. A mascot tryout so Xaverian finally has a real Sailor to rally behind.</p>
+            <p class="platform-desc">Weekend community service opportunities — beach cleanups, Blood Cancer United fundraising, and more — to help students earn hours and build their résumés. More service trips. A mascot tryout so Xaverian finally has a real Sailor to rally behind.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- PARTICIPATE -->
   <section id="participate">
     <div class="section-inner">
       <p class="section-label">Join the Movement</p>
       <h2 class="section-title">Get Involved</h2>
-      <p class="section-body">A campaign is only as strong as the people behind it. Here's how you can help Rocco win.</p>
+      <p class="section-body">
+        A campaign is only as strong as the people behind it. Here's how you can help Rocco win.
+      </p>
       <div class="participate-grid">
         <div class="participate-ways">
           <div class="participate-way">
@@ -753,17 +854,22 @@
             <span class="pw-icon">📱</span>
             <div class="pw-text">
               <p class="pw-title">Share on Social Media</p>
-              <p class="pw-desc">Follow and share @roccoforprez — every post and repost helps us reach more Xaverian voters.</p>
+              <p class="pw-desc">
+              Follow and share @roccoforprez — every post and repost helps us reach more Xaverian voters.
+              </p>
             </div>
           </div>
           <div class="participate-way">
             <span class="pw-icon">🗳️</span>
             <div class="pw-text">
               <p class="pw-title">Vote on Election Day</p>
-              <p class="pw-desc">Most importantly — show up and vote! Election date to be announced. Stay tuned.</p>
+              <p class="pw-desc">
+              Most importantly — show up and vote! Election date to be announced. Stay tuned.
+              </p>
             </div>
           </div>
         </div>
+
         <div class="contact-box">
           <h3>Want to Help Out?</h3>
           <p>Drop your name and email and we'll reach out about how you can get involved with the campaign.</p>
@@ -776,19 +882,56 @@
             <p id="form-error" style="display:none; color: #e87a7a; font-size: 0.9rem; text-align: center; margin-top: 0.5rem;">Something went wrong. Try again!</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p class="footer-name">Rocco Pisani for President</p>
-    <p class="footer-sub">Xaverian High School · Bay Ridge, Brooklyn · Class of 2027</p>
-  </footer>
 
   <script>
     async function submitForm() {
       const name = document.getElementById('contact-name').value.trim();
       const email = document.getElementById('contact-email').value.trim();
       const grade = document.getElementById('contact-grade').value.trim();
-      if (!name || !email) { alert('Please enter your name and email!'); return; }
-      const btn = document.querySelector​​​​​​​​​​​​​​​​
+
+      if (!name || !email) {
+        alert('Please enter your name and email!');
+        return;
+      }
+
+      const btn = document.querySelector('.contact-submit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('https://formspree.io/f/mrejowoj', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name, email, grade })
+        });
+
+        if (res.ok) {
+          btn.style.display = 'none';
+          document.getElementById('contact-name').style.display = 'none';
+          document.getElementById('contact-email').style.display = 'none';
+          document.getElementById('contact-grade').style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          document.getElementById('form-error').style.display = 'block';
+          btn.textContent = 'Count Me In ✦';
+          btn.disabled = false;
+        }
+      } catch (e) {
+        document.getElementById('form-error').style.display = 'block';
+        btn.textContent = 'Count Me In ✦';
+        btn.disabled = false;
+      }
+    }
+  </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">Rocco Pisani for President</p>
+    <p class="footer-sub">Xaverian High School · Bay Ridge, Brooklyn · Class of 2027</p>
+  </footer>
+
+</body>
+</html>
